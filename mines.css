@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background: #1a1b23;
+    color: white;
+    overflow-x: hidden;
+}
+.header {
+    background: #252730;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #333;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #8b5cf6, #a855f7);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+.nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.nav a {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.nav a:hover, .nav a.active {
+    color: white;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.balance {
+    color: #8b5cf6;
+    font-weight: 600;
+}
+.deposit-btn {
+    background: linear-gradient(135deg, #8b5cf6, #a855f7);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s;
+}
+.deposit-btn:hover {
+    transform: translateY(-1px);
+}
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.game-header {
+    background: linear-gradient(135deg, #8b5cf6, #a855f7, #ec4899);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.game-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.game-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+.controls {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.control-panel {
+    background: #252730;
+    border-radius: 12px;
+    padding: 1.5rem;
+    height: fit-content;
+}
+.control-group {
+    margin-bottom: 1.5rem;
+}
+.control-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #e5e7eb;
+}
+.risk-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+.risk-btn {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #374151;
+    background: #1f2937;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+.risk-btn.active {
+    background: linear-gradient(135deg, #8b5cf6, #a855f7);
+    border-color: #8b5cf6;
+}
+.risk-btn:hover {
+    border-color: #8b5cf6;
+}
+.risk-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.input-field {
+    width: 100%;
+    padding: 0.75rem;
+    background: #1f2937;
+    border: 1px solid #374151;
+    border-radius: 6px;
+    color: white;
+    font-size: 1rem;
+}
+.input-field:focus {
+    outline: none;
+    border-color: #8b5cf6;
+}
+.risk-info {
+    background: #1f2937;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+.risk-info-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+.risk-info-item:last-child {
+    margin-bottom: 0;
+}
+.play-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #10b981, #059669);
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin-bottom: 1rem;
+}
+.play-btn:hover {
+    transform: translateY(-1px);
+}
+.play-btn:disabled {
+    background: #374151;
+    cursor: not-allowed;
+    transform: none;
+}
+.cashout-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+    display: none;
+}
+.cashout-btn:hover {
+    transform: translateY(-1px);
+}
+.game-area {
+    background: #252730;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+}
+.game-grid {
+    display: inline-grid;
+    gap: 4px;
+    background: #1f2937;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+.grid-cell {
+    width: 50px;
+    height: 50px;
+    background: #374151;
+    border: 1px solid #4b5563;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+}
+.grid-cell:hover {
+    background: #4b5563;
+    transform: scale(1.05);
+}
+.grid-cell.revealed.safe {
+    background: linear-gradient(135deg, #10b981, #059669);
+    cursor: default;
+}
+.grid-cell.revealed.mine {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    cursor: default;
+}
+.grid-cell.revealed.safe::after {
+    content: '💎';
+}
+.grid-cell.revealed.mine::after {
+    content: '💣';
+}
+.game-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+.stat-item {
+    text-align: center;
+}
+.stat-label {
+    font-size: 0.9rem;
+    color: #9ca3af;
+    margin-bottom: 0.25rem;
+}
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #8b5cf6;
+}
+.game-message {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    display: none;
+}
+.game-message.win {
+    background: #065f46;
+    color: #10b981;
+}
+.game-message.lose {
+    background: #7f1d1d;
+    color: #ef4444;
+}
+@media (max-width: 768px) {
+    .controls {
+        grid-template-columns: 1fr;
+    }
+    .game-title {
+        font-size: 2rem;
+    }
+    .grid-cell {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
